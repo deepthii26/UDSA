@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MoodSense — 3D Emotion-Adaptive UI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><div class="brand">MoodSense <span class="live-dot"></span></div><div class="subtitle">An Emotion-Adaptive User Interface</div></div>
+      <div id="status" class="status">Ready to listen</div>
+    </header>
+    <section class="workspace">
+      <article class="panel composer">
+        <div class="eyebrow">EXPRESS YOURSELF</div>
+        <h1>How are you feeling?</h1>
+        <p class="helper">Write a sentence, include an emoji, or use the quick picks.</p>
+        <p class="example">Example: I completed my project and feel amazing 😊</p>
+        <textarea id="feeling" aria-label="How are you feeling?" placeholder="Start typing here..."></textarea>
+        <div id="validation" class="validation" role="alert"></div>
+        <button id="analyze" class="primary">Analyze my mood <span>→</span></button>
+        <div class="tip"><span>✦</span> MoodSense analyzes your words privately on this computer.</div>
+      </article>
+      <article class="panel mood-panel">
+        <div class="mood-heading"><span class="eyebrow">YOUR MOOD</span><span id="confidence">Waiting for input</span></div>
+        <div id="scene" class="scene"></div>
+        <div class="detected">Detected Emotion</div>
+        <div id="label" class="mood-label">NEUTRAL</div>
+        <p id="message" class="message">Tell me how you feel, and I’ll adapt to you.</p>
+      </article>
+    </section>
+    <section class="picker-section"><div class="eyebrow">QUICK EMOTION PICKS</div><div id="picker" class="picker"></div></section>
+    <button id="reset" class="reset">↺ Reset</button>
+  </main>
+  <script type="module" src="controller.js"></script>
+</body>
+</html>

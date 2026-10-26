@@ -1,0 +1,16 @@
+{
+  "name": "udsa_project",
+  "version": "1.0.0",
+  "description": "MoodSense is an offline Python desktop application that detects a user's emotion from typed text or an emoji selection and adapts its interface accordingly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "three": "^0.186.1"
+  }
+}
